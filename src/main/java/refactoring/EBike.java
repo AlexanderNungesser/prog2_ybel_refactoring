@@ -2,25 +2,18 @@ package refactoring;
 
 public class EBike extends Bike {
 
-    public int maxSpeed;
-    public int rearGearsCount;
-    public int frontGearsCount;
+    private int batteryCapacity;
 
-    public EBike(String pn, double p, int ms, int rgc, int fgc, int bc) {
-        productName = pn;
-        price = p;
-        maxSpeed = ms;
-        rearGearsCount = rgc;
-        frontGearsCount = fgc;
-        batteryCapacity = bc;
+    public EBike(int maxSpeed, int rearGearsCount, int frontGearsCount, int batteryCapacity) {
+        super(maxSpeed, rearGearsCount, frontGearsCount);
+        this.batteryCapacity = batteryCapacity;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    public int getBatteryCapacity() {
+        return batteryCapacity;
     }
 
-    @Override
-    public int getGearsCount() {
-        return rearGearsCount * frontGearsCount;
+    public void setBatteryCapacity(int batteryCapacity) {
+        this.batteryCapacity = batteryCapacity;
     }
 }

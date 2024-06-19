@@ -9,6 +9,7 @@ public class TestArticle {
 
     @BeforeEach
     public void setUp() {
-        article = new Article(bike, 5);
+        bike = new Bike(30, 7, 3);
+        article = new Article("Race", bike, 1500.00, 1);
     }
 }

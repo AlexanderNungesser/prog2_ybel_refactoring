@@ -2,15 +2,21 @@ package refactoring;
 
 public class Bike {
 
-    public String productName;
-    public double price;
-    public Integer batteryCapacity;
+    public int maxSpeed;
+    public int rearGearsCount;
+    public int frontGearsCount;
 
-    public Integer getBatteryCapacity() {
-        return batteryCapacity;
+    public Bike(int maxSpeed, int rearGearsCount, int frontGearsCount) {
+        this.maxSpeed = maxSpeed;
+        this.rearGearsCount = rearGearsCount;
+        this.frontGearsCount = frontGearsCount;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
     }
 
     public int getGearsCount() {
-        throw new UnsupportedOperationException("Not Implemented");
+        return rearGearsCount * frontGearsCount;
     }
 }
